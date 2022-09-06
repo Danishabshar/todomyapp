@@ -11,7 +11,7 @@ const [edittext,setedittext]=useState("")
 const handleSubmit = (e) => {
   e.preventDefault();
 
-
+//creating new constant naming 'todo'
   const newtodo= {
     id: new Date().getTime(),
     text : todo,
@@ -23,14 +23,14 @@ const handleSubmit = (e) => {
 
 }
 
-
+//creating another constant naming 'Deletetodo' which will further deletes it as user requests
 const Deletetodo=(id)=>{
   const updatedtodo=[...todos].filter((todo)=> todo.id !== id)
   settodos(updatedtodo)
 }
 
 
-
+////creating another constant naming 'Edittodo' which will further updates it as user requests
 const edittodo=(id)=>{
   const updatedtodo=[...todos].map((todo)=>{
     if(todo.id===id){
